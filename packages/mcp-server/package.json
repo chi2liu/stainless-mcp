@@ -8,10 +8,10 @@
   "type": "commonjs",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stainless-sdks/first-stainless-mcp-typescript.git",
+    "url": "git+https://github.com/chi2liu/stainless-mcp.git",
     "directory": "packages/mcp-server"
   },
-  "homepage": "https://github.com/stainless-sdks/first-stainless-mcp-typescript/tree/main/packages/mcp-server#readme",
+  "homepage": "https://github.com/chi2liu/stainless-mcp/tree/main/packages/mcp-server#readme",
   "license": "Apache-2.0",
   "packageManager": "yarn@1.22.22",
   "private": false,
