@@ -1,6 +1,6 @@
 # First Stainless Mcp TypeScript API Library
 
-[![NPM version](https://img.shields.io/npm/v/first-stainless-mcp.svg)](https://npmjs.org/package/first-stainless-mcp) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/first-stainless-mcp)
+[![NPM version](<https://img.shields.io/npm/v/first-stainless-mcp.svg?label=npm%20(stable)>)](https://npmjs.org/package/first-stainless-mcp) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/first-stainless-mcp)
 
 This library provides convenient access to the First Stainless Mcp REST API from server-side TypeScript or JavaScript.
 
