@@ -22,7 +22,7 @@ export class Store extends APIResource {
   }
 }
 
-export type StoreListInventoryResponse = Record<string, number>;
+export type StoreListInventoryResponse = { [key: string]: number };
 
 Store.Order = Order;
 
