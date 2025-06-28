@@ -38,8 +38,8 @@ export const tool: Tool = {
 
 export const handler = async (client: FirstStainlessMcp, args: Record<string, unknown> | undefined) => {
   const { petId, ...body } = args as any;
-  await client.pet.updateByID(petId, body);
-  return asTextContentResult('Successful tool call');
+  const response = await client.pet.updateByID(petId, body).asResponse();
+  return asTextContentResult(await response.text());
 };
 
 export default { metadata, tool, handler };
