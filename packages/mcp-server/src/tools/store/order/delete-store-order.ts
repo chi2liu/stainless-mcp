@@ -31,8 +31,8 @@ export const tool: Tool = {
 
 export const handler = async (client: FirstStainlessMcp, args: Record<string, unknown> | undefined) => {
   const { orderId, ...body } = args as any;
-  await client.store.order.delete(orderId);
-  return asTextContentResult('Successful tool call');
+  const response = await client.store.order.delete(orderId).asResponse();
+  return asTextContentResult(await response.text());
 };
 
 export default { metadata, tool, handler };
