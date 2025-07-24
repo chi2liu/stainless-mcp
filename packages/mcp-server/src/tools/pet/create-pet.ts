@@ -78,6 +78,7 @@ export const tool: Tool = {
       },
     },
   },
+  annotations: {},
 };
 
 export const handler = async (client: FirstStainlessMcp, args: Record<string, unknown> | undefined) => {

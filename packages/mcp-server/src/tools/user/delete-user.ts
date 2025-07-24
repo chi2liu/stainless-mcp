@@ -33,6 +33,9 @@ export const tool: Tool = {
     },
     required: ['username'],
   },
+  annotations: {
+    idempotentHint: true,
+  },
 };
 
 export const handler = async (client: FirstStainlessMcp, args: Record<string, unknown> | undefined) => {
