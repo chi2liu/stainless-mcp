@@ -34,6 +34,9 @@ export const tool: Tool = {
     },
     required: ['petId'],
   },
+  annotations: {
+    readOnlyHint: true,
+  },
 };
 
 export const handler = async (client: FirstStainlessMcp, args: Record<string, unknown> | undefined) => {
