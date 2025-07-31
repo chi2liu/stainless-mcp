@@ -45,8 +45,8 @@ export const tool: Tool = {
 };
 
 export const handler = async (client: FirstStainlessMcp, args: Record<string, unknown> | undefined) => {
-  const { petId, ...body } = args as any;
-  return asTextContentResult(await maybeFilter(args, await client.pet.uploadImage(petId, body)));
+  const { petId, image, ...body } = args as any;
+  return asTextContentResult(await maybeFilter(args, await client.pet.uploadImage(petId, image, body)));
 };
 
 export default { metadata, tool, handler };
