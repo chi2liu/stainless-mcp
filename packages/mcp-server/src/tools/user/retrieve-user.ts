@@ -40,8 +40,8 @@ export const tool: Tool = {
 };
 
 export const handler = async (client: FirstStainlessMcp, args: Record<string, unknown> | undefined) => {
-  const { username, ...body } = args as any;
-  return asTextContentResult(await maybeFilter(args, await client.user.retrieve(username)));
+  const { username, jq_filter, ...body } = args as any;
+  return asTextContentResult(await maybeFilter(jq_filter, await client.user.retrieve(username)));
 };
 
 export default { metadata, tool, handler };
