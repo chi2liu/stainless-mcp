@@ -1,9 +1,8 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { asTextContentResult } from 'first-stainless-mcp-mcp/tools/types';
+import { Metadata, asTextContentResult } from 'first-stainless-mcp-mcp/tools/types';
 
 import { Tool } from '@modelcontextprotocol/sdk/types.js';
-import type { Metadata } from '../';
 import FirstStainlessMcp from 'first-stainless-mcp';
 
 export const metadata: Metadata = {
@@ -25,13 +24,17 @@ export const tool: Tool = {
         type: 'string',
       },
     },
+    required: ['username'],
+  },
+  annotations: {
+    idempotentHint: true,
   },
 };
 
 export const handler = async (client: FirstStainlessMcp, args: Record<string, unknown> | undefined) => {
   const { username, ...body } = args as any;
-  await client.user.delete(username);
-  return asTextContentResult('Successful tool call');
+  const response = await client.user.delete(username).asResponse();
+  return asTextContentResult(await response.text());
 };
 
 export default { metadata, tool, handler };

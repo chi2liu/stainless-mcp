@@ -1,6 +1,6 @@
 # First Stainless Mcp TypeScript API Library
 
-[![NPM version](https://img.shields.io/npm/v/first-stainless-mcp.svg)](https://npmjs.org/package/first-stainless-mcp) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/first-stainless-mcp)
+[![NPM version](<https://img.shields.io/npm/v/first-stainless-mcp.svg?label=npm%20(stable)>)](https://npmjs.org/package/first-stainless-mcp) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/first-stainless-mcp)
 
 This library provides convenient access to the First Stainless Mcp REST API from server-side TypeScript or JavaScript.
 
@@ -11,11 +11,8 @@ It is generated with [Stainless](https://www.stainless.com/).
 ## Installation
 
 ```sh
-npm install git+ssh://git@github.com:stainless-sdks/first-stainless-mcp-typescript.git
+npm install first-stainless-mcp
 ```
-
-> [!NOTE]
-> Once this package is [published to npm](https://app.stainless.com/docs/guides/publish), this will become: `npm install first-stainless-mcp`
 
 ## Usage
 
@@ -225,9 +222,8 @@ parameter. This library doesn't validate at runtime that the request matches the
 send will be sent as-is.
 
 ```ts
-client.foo.create({
-  foo: 'my_param',
-  bar: 12,
+client.store.order.create({
+  // ...
   // @ts-expect-error baz is not yet public
   baz: 'undocumented option',
 });
@@ -336,7 +332,7 @@ This package generally follows [SemVer](https://semver.org/spec/v2.0.0.html) con
 
 We take backwards-compatibility seriously and work hard to ensure you can rely on a smooth upgrade experience.
 
-We are keen for your feedback; please open an [issue](https://www.github.com/stainless-sdks/first-stainless-mcp-typescript/issues) with questions, bugs, or suggestions.
+We are keen for your feedback; please open an [issue](https://www.github.com/chi2liu/stainless-mcp/issues) with questions, bugs, or suggestions.
 
 ## Requirements
 
