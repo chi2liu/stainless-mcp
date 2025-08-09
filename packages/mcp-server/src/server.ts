@@ -26,7 +26,7 @@ export const newMcpServer = () =>
   new McpServer(
     {
       name: 'first_stainless_mcp_api',
-      version: '0.0.1-alpha.0',
+      version: '1.0.0',
     },
     { capabilities: { tools: {}, logging: {} } },
   );
